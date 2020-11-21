@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
-include(FindOpenSSL)
-
 project(BloggerBugfixing)
 
 find_package(Drogon REQUIRED)
-find_package(OpenSSL REQUIRED)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -18,5 +15,4 @@ add_executable(BloggerBugfixing
 target_link_libraries(BloggerBugfixing PRIVATE
 	ws2_32
 	Drogon::Drogon
-	OpenSSL::Crypto 
 )
