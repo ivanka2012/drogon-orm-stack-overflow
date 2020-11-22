@@ -6,11 +6,13 @@
 			"https": false
 		}
 	],
-	"log": {
-		"log_path": "./logs",
-		"log_level": "TRACE"
-	},
-	"threads_num": 8,
-	"enable_session": true,
-	"session_timeout": 3600,
+	"app": {
+		"log": {
+			"log_path": "./logs",
+			"log_level": "TRACE"
+		},
+		"threads_num": 8,
+		"enable_session": true,
+		"session_timeout": 3600
+	}
 }

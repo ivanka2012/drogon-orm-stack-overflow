@@ -41,7 +41,6 @@ void CBlogPostStorage::StoreBlogPost(
         std::function<void(const CHttpRequest& request, const CBlogPost&&)> callback, 
         std::function<void(const CHttpRequest& request, const drogon::orm::DrogonDbException&, const CBlogPost&&)> errorCallback
     ) {
-    _Create_Database_If_Havent();
     
     auto transPtr = client->newTransaction();
     transPtr->execSqlAsync("CREATE TABLE IF NOT EXISTS \"blogposts\"(\"title\" TEXT, \"posted_time\" INTEGER, \"text\" BLOB)",
@@ -75,7 +74,6 @@ void CBlogPostStorage::RetrieveBlogPosts(
         std::function<void(const CHttpRequest&, std::vector<CBlogPost>)> callback, 
         std::function<void(const CHttpRequest&, const drogon::orm::DrogonDbException&)> errorCallback
     ) {
-    _Create_Database_If_Havent();
 
     auto connection = client;
 
