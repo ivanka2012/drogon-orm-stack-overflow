@@ -21,4 +21,7 @@ public:
         std::function<void(const CHttpRequest&, std::vector<CBlogPost>)> callback, 
         std::function<void(const CHttpRequest&, const drogon::orm::DrogonDbException&)> errorCallback
     );
+    CBlogPostStorage(){
+        _Create_Database_If_Havent();
+    }
 };

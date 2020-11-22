@@ -12,6 +12,7 @@
 #include <list>
 #include <deque>
 #include <queue>
+#include <array>
 
     #include "BlogPost.h"
 
